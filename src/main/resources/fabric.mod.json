@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "testerino",
+	"version": "${version}",
+	"name": "testerino",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"poinalex01"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/testerino/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.poinalex01.testerino.Testerino"
+		],
+		"client": [
+			"net.poinalex01.testerino.TesterinoClient"
+		],
+		"fabric-datagen": [
+			"net.poinalex01.testerino.TesterinoDataGenerator"
+		]
+	},
+	"mixins": [
+		"testerino.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.10",
+		"minecraft": "~1.21.4",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
