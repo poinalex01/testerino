@@ -14,6 +14,7 @@ import java.util.function.Function;
 
 public class ModItems {
     public static final Item RUBY = registerItem("ruby", Item::new, new Item.Settings());
+    public static final Item RAW_RUBY = registerItem("rawruby", Item::new, new Item.Settings());
 
 
     private static Item registerItem(String name, Function<Item.Settings, Item> factory, Item.Settings settings) {
@@ -22,10 +23,10 @@ public class ModItems {
     }
     private static void customIngredients(FabricItemGroupEntries entries) {
         entries.add(RUBY);
+        entries.add(RAW_RUBY);
     }
     public static void registerModItems() {
         Testerino.LOGGER.info("Registering Mod Items for " + Testerino.MOD_ID);
-
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(ModItems::customIngredients);
     }
 }
